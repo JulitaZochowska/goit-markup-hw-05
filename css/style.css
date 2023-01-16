@@ -96,11 +96,19 @@ h1 {
   color: var(--main-color-grey);
   fill: var(--main-color-grey);
   margin-right: 46px;
+  transition-property: color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .interactive:hover,
 .interactive:focus {
   color: var(--main-color-blue);
   fill: var(--main-color-blue);
+}
+.oldpartoffooter {
+  transition-property: underline;
+  transition-duration: 5000ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .interactive.last {
   margin-right: 0;
@@ -133,6 +141,17 @@ h2 {
   text-decoration: underline;
   text-decoration-color: var(--main-color-blue);
 }
+.email,
+.telnr,
+.logo,
+.address,
+.newpartoffooter h3 {
+  text-decoration-color: var(--main-color-blue);
+  transition-property: text-decoration-color;
+  transition-duration: 5000ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .buttonstudio {
   background-color: var(--main-color-blue);
   color: var(--main-color-white);
@@ -148,6 +167,9 @@ h2 {
   letter-spacing: 6%;
   border-radius: 4px;
   border: none;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 button {
   background-color: var(--main-color-blue);
@@ -156,11 +178,13 @@ button {
   line-height: 1.62;
   font-weight: 500;
   text-align: center;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 button:hover,
 button:focus {
   color: var(--main-color-white);
-  background-color: var(--main-color-blue);
   line-height: 1.62;
   text-align: center;
 }
@@ -224,6 +248,13 @@ footer {
 }
 .ourteam-item {
   list-style: none;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 1);
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ourteam-item:hover,
+.ourteam-item:focus {
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 .portfolio {
@@ -235,6 +266,10 @@ footer {
   list-style: none;
   flex-basis: calc((100%- (2 * 30px)) / 3);
   cursor: pointer;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 1);
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-item:hover,
 .portfolio-item:focus {
@@ -392,6 +427,9 @@ figure > img {
   fill: var(--main-color-svg);
   border-radius: 4px;
   cursor: pointer;
+  transition-property: fill, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nasiklienci-svg:hover,
 .nasiklienci-svg:focus {
@@ -419,6 +457,9 @@ figure > img {
   height: 44px;
   padding-top: 12px;
   border-radius: 22px;
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .shadow:hover,
@@ -456,4 +497,69 @@ figure > img {
 .socialmedia-icon:focus {
   fill: var(--main-color-white);
   background-color: var(--main-color-blue);
+}
+.label {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.17;
+  background-color: rgba(47, 48, 58, 0.8);
+  width: 100%;
+  height: 70px;
+  color: var(--main-color-white);
+  position: absolute;
+  bottom: 0;
+  padding-top: 27px;
+  margin-top: 224px;
+}
+.profession-item {
+  position: relative;
+}
+.li-agencja {
+  position: relative;
+}
+.li-agencja::after {
+  content: "cccc";
+  text-decoration-color: var(--main-color-blue);
+  width: 53px;
+  height: 4px;
+  position: absolute;
+  top: 31px;
+  left: 0;
+}
+.box {
+  transition-property: transform;
+}
+.box:hover,
+.box:focus {
+  transform: translateY(-100%);
+  width: 100%;
+  height: 100%;
+}
+.portfolio-item-text {
+  background-color: rgba(33, 150, 243, 0.9);
+  position: absolute;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--main-color-white);
+  padding-top: 49px;
+  padding-bottom: 49px;
+  padding-left: 24px;
+}
+
+.portfolio-item-container {
+  position: relative;
+}
+.overlay {
+  background-color: rgba(33, 150, 243, 0.9);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translateY(0);
+}
+.portfolio-item-container:hover,
+.portfolio-item-container:focus {
+  transform: translateY(-100%);
 }
