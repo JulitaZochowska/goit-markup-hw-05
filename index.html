@@ -22,11 +22,6 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <button data-modal-open>OPEN</button>
-    <div class="modal is-hidden" data modal>
-      <button data-modal-close>X</button>
-    </div>
-
     <header>
       <div class="container containerinheader">
         <nav>
@@ -68,7 +63,9 @@
       <section class="tittle">
         <div class="container proffession-general">
           <h1>efektywne rozwiązania<br />dla waszego biznesu</h1>
-          <button type="button" class="buttonstudio">Zamów usługę</button>
+          <button type="button" class="buttonstudio" data-modal-open >
+            Zamów usługę
+          </button>
         </div>
       </section>
       <section>
@@ -77,7 +74,6 @@
             <li class="loremipsum-items">
               <svg
                 class="icon-antenna-1"
-                width="270"
                 height="120"
                 style="outline: 1px solid rgba(245, 244, 250, 1)"
               >
@@ -466,6 +462,10 @@
         </div>
       </div>
     </footer>
+    <div class="modal is-hidden" data modal>
+      <div class="modal-window">
+      <button data-modal-close>X</button>
+    </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>
