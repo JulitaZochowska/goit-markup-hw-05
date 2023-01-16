@@ -516,30 +516,40 @@ figure > img {
 .profession-item {
   position: relative;
 }
-.li-agencja {
+.li-agencja,
+.li-portfolio {
   position: relative;
 }
 .li-agencja::after {
-  content: "cccc";
-  text-decoration-color: var(--main-color-blue);
+  content: "";
+  background-color: var(--main-color-blue);
   width: 53px;
   height: 4px;
   position: absolute;
-  top: 31px;
+  top: 45px;
   left: 0;
 }
-.box {
-  transition-property: transform;
+.li-portfolio::after {
+  content: "";
+  background-color: var(--main-color-blue);
+  width: 58px;
+  height: 4px;
+  position: absolute;
+  top: 45px;
+  left: 0;
 }
-.box:hover,
-.box:focus {
-  transform: translateY(-100%);
+.portfolio-item-container {
+  position: relative;
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
   width: 100%;
   height: 100%;
-}
-.portfolio-item-text {
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
   background-color: rgba(33, 150, 243, 0.9);
-  position: absolute;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
@@ -547,22 +557,14 @@ figure > img {
   padding-top: 49px;
   padding-bottom: 49px;
   padding-left: 24px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-item:hover .overlay,
+.portfolio-item:focus .overlay {
+  transform: translateY(0%);
 }
 
-.portfolio-item-container {
-  position: relative;
-}
-.overlay {
-  background-color: rgba(33, 150, 243, 0.9);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform: translateY(0);
-}
-.portfolio-item-container:hover,
-.portfolio-item-container:focus {
-  transform: translateY(-100%);
-}
 .is-hidden {
   pointer-events: none;
   visibility: hidden;
