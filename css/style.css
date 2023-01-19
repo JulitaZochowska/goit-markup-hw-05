@@ -592,6 +592,7 @@ figure > img {
   border-radius: 4px;
   animation-name: changeBgScale, changeBgOpacity;
   animation-duration: 3s, 4s;
+  animation-iteration-count: 5;
 }
 .modal-container {
   position: fixed;
