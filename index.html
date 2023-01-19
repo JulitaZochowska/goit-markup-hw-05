@@ -33,7 +33,7 @@
               >
             </li>
             <li class="li-agencja">
-              <a class="interactive" href="Agencja">Agencja</a>
+              <a class="interactive agencja" href="Agencja">Agencja</a>
             </li>
             <li>
               <a class="interactive" href="./portfolio.html">Portfolio</a>
@@ -63,7 +63,7 @@
       <section class="tittle">
         <div class="container proffession-general">
           <h1>efektywne rozwiązania<br />dla waszego biznesu</h1>
-          <button type="button" class="buttonstudio" data-modal-open >
+          <button type="button" class="buttonstudio" data-modal-open>
             Zamów usługę
           </button>
         </div>
@@ -75,6 +75,7 @@
               <svg
                 class="icon-antenna-1"
                 height="120"
+                width="270"
                 style="outline: 1px solid rgba(245, 244, 250, 1)"
               >
                 <use
@@ -462,9 +463,16 @@
         </div>
       </div>
     </footer>
-    <div class="modal is-hidden" data modal>
+    <div class="modal-container is-hidden" data-modal>
       <div class="modal-window">
-      <button data-modal-close><svg width="30" height="30"><use href=".images/icons.svg#icon-Ellipse-1-2"></use></svg></button>
+        <div class="modal-header">
+          <button data-modal-close class="modal-close-button">
+            <svg width="30" height="30">
+              <use href="./images/close-icon.svg#close-icon"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
     <script src="./js/modal.js"></script>
   </body>
