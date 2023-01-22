@@ -13,14 +13,6 @@
     opacity: 1;
   }
 }
-@keyframes changeBgScale {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(2);
-  }
-}
 body {
   color: rgba(33, 33, 33, 1);
   font-family: "Roboto", sans-serif;
@@ -590,8 +582,9 @@ figure > img {
   background-color: var(--main-color-white);
   box-shadow: rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  animation-name: changeBgScale, changeBgOpacity;
-  animation-duration: 1800ms, 2000ms;
+  animation-name: changeBgOpacity;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
 }
 .modal-container {
   position: fixed;
