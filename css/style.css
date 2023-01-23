@@ -2,17 +2,6 @@
   margin: 0;
   padding: 0;
 }
-@keyframes changeBgOpacity {
-  0% {
-    opacity: 0.2;
-  }
-  33% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 body {
   color: rgba(33, 33, 33, 1);
   font-family: "Roboto", sans-serif;
@@ -131,22 +120,18 @@ h2 {
 .proffession {
   color: var(--main-color-grey);
 }
+.email:hover,
+.email:focus,
+.telnr:hover,
+.telnr:focus {
+  text-decoration: underline;
+}
 .email,
 .telnr {
   color: var(--main-color-white-plus);
   font-size: 14px;
   line-height: 1.71;
   cursor: pointer;
-}
-.email:hover,
-.email:focus,
-.telnr:hover,
-.telnr:focus {
-  text-decoration: underline;
-  text-decoration-color: var(--main-color-grey);
-}
-.email,
-.telnr {
   text-decoration-color: var(--main-color-grey);
   transition-property: text-decoration-color;
   transition-duration: 250ms;
@@ -163,7 +148,6 @@ h2 {
   height: 50px;
   width: 200px;
   margin-top: 30px;
-  text-align: center;
   letter-spacing: 0.06em;
   border-radius: 4px;
   border: none;
@@ -241,6 +225,7 @@ footer {
 }
 .profession-item {
   list-style: none;
+  position: relative;
 }
 .ourteam {
   display: flex;
@@ -261,7 +246,7 @@ footer {
 }
 .portfolio-item {
   list-style: none;
-  flex-basis: calc((100%- (2 * 30px)) / 3);
+  flex-basis: calc((100% - (2 * 30px)) / 3);
   cursor: pointer;
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 1);
   transition-property: box-shadow;
@@ -411,8 +396,6 @@ figure > img {
   list-style: none;
   display: flex;
   text-align: center;
-
-  display: flex;
   gap: 10px;
 }
 .nasiklienci {
@@ -511,9 +494,6 @@ figure > img {
   padding-top: 27px;
   margin-top: 224px;
 }
-.profession-item {
-  position: relative;
-}
 .li-agencja,
 .li-portfolio {
   position: relative;
@@ -572,21 +552,22 @@ figure > img {
 .is-hidden {
   pointer-events: none;
   visibility: hidden;
-  opacity: 0;
-  transform: translateX(-50%) translateY(-50%) scale(0) rotate(0deg)
-    skew(40deg, 40deg);
 }
+
+.is-hidden .modal-window {
+  opacity: 0;
+}
+
 .modal-window {
   width: 528px;
   height: 581px;
   background-color: var(--main-color-white);
   box-shadow: rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  animation-name: changeBgOpacity;
-  animation-duration: 1000ms;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 1s;
+  transition-timing-function: linear;
 }
 .modal-container {
   position: fixed;
